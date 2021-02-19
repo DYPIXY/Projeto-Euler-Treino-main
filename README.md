@@ -34,16 +34,17 @@ Example:
 <br> 
 
 <code>
-
+    
     //here down we got a ~while~
     while(something){
         do something
     } 
-</code><br>
+</code>
+
+<br>
 <br>
 
 <p>I used the Visual Code to edit and debug this, You can use to read and edit the code, but if you just want to read the code i strongly recommend that you  use <a href="https://wereturtle.github.io/ghostwriter/" target="_blank">Ghost Writer</a>
-<br>
 <br>
 <br>
 <p><strong><h3>this ~ReadMe~ is just for let it clear for when you go to read the code<br>

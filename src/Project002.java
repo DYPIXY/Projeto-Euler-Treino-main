@@ -3,7 +3,6 @@ public class Project002 {
     //Fibonacci sequence  
         int a=1,b=0,c=0,sum=0;
         while(c<=4000000){
-            System.out.println(c);
             if(c%2==0){
                 sum+=c;
             }

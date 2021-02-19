@@ -15,14 +15,14 @@
 */
 public class Project006 {
     public static void main(String[] args){
-        int sum=0, square=0, i=1, sum2;
+        int sum=0, square=0, i=1;
         while(i<=100){
-            sum += i;
             square+=i*i;
             i++;
         }
-        sum2=sum*sum;
-        System.out.println("Project006: "+(-1*(square-sum2)));
+        sum = (100*(100+1))/2;
+        sum*=sum;
 
+        System.out.println("Project006: "+(sum-square));
     }
 }

@@ -21,6 +21,6 @@ public class Project005 {
             }       
             sub+=2;
         }
-        System.out.print("Project005: "+num);
+        System.out.println("Project005: "+num);
     }
 }

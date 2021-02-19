@@ -25,6 +25,6 @@ public class Project007 {
             }
             prime++;
         }
-    System.out.print("Project007: "+result);
+    System.out.println("Project007: "+result);
     }
 }

@@ -18,16 +18,29 @@ def start():
         print(ListFiles)
 
     def keyboard():
+        a=0
         a = input("Select the number that represents one of the projects you want to run: ")
-        
+        unvalid=False
         a = str(a)
+        if a =="shrek2" or a=="Shrek2":
+            pathx = os.path.dirname(__file__)
+            path = str(pathx+"/doNotClick")
+            os.chdir(path)
+            os.system("python doNotClick.py")
+            quit()
         if len(a) == 1:
             a = str('00'+a)
         elif len(a)==2:
             a= str('0'+a)
         if len(a)!= 3:
             print("invalid key, please select a valid integer")
+            unvalid=True
+            start()
+        #check if the value is valid
+        isinstance
         a = str(a)
+        if unvalid==True:
+            keyboard()
         return a
 
     filesfunc()
@@ -44,6 +57,7 @@ def start():
     os.system(ExecWay)
     print( "Executed in ≅",time.time() - exectime,'seconds')
     print("")
+    
     def reset():
         reset = input("want to run it again? [y/n] ")
         if reset=="y" or reset=="Y":

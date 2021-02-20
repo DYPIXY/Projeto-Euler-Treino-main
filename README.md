@@ -1,8 +1,9 @@
 <h1>HOW TO RUN THIS REPOSITORY</h1>
 
-<h3><p>This is a terminal based application, therefore it doesn't have a GUI</h3>
+<h3><p>This is a terminal based application, therefore it doesn't have a GUI
+</p></h3>
 <br>
-<h2><p>All pcs OS execute this in the same way</p></h2>
+<h2><p>All PCs OS execute this in the same way</p></h2>
 <h3>
 <ol>
 <li> Open your terminal and go to dirctory of the application using the command </li>
@@ -29,23 +30,15 @@
 </h3>
 <h1>How to read the code</h1>
 <h3><p>In all comment section i'll use " ~ " to make a referemce of a code part<p>
-<br>
 Example:
-<br> 
-
 <code>
-    
+
     //here down we got a ~while~
     while(something){
         do something
     } 
 </code>
-
-<br>
-<br>
-
 <p>I used the Visual Code to edit and debug this, You can use to read and edit the code, but if you just want to read the code i strongly recommend that you  use <a href="https://wereturtle.github.io/ghostwriter/" target="_blank">Ghost Writer</a>
-<br>
 <br>
 <p><strong><h3>this ~ReadMe~ is just for let it clear for when you go to read the code<br>
 bear with me if i be a little slow to update the repository, i'm just learning other things.</h3></p></strong>

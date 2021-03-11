@@ -2,8 +2,23 @@ import time
 import os
 import math
 
+ 
+
+
 print("Hello",os.getlogin())
-def start():
+
+def start():    
+    def reset():
+        reset1 = input("want to run it again? [y/n] ")
+        if reset1=="y" or reset1=="Y":
+            start()
+        elif reset1=="n" or reset1=="N":
+            print("")
+            print("ok, closing, goodbye!")
+        else:
+            print("that's a not valid string, please try again")
+            reset()
+
 
     path = os.path.dirname(__file__)
     os.chdir(path)
@@ -20,10 +35,7 @@ def start():
 
     #user input
     def keyboard():
-        a = 0
-        del a
         a = input("Select the number that represents one of the projects you want to run: ")
-    
         #shrek 2 
         if a =="shrek2" or a=="Shrek2":
             pathx = os.path.dirname(__file__)
@@ -31,17 +43,15 @@ def start():
             os.chdir(path)
             os.system("python doNotClick.py")
             quit()
+        
+        #check if a is a int
+        x = type(a)
+        x = str(x)
         try:
             a=int(a)
         except ValueError:
-            print("you are supossed to enter a integer number")
-            print (a)
-            print (type(a))
-            del af
-            keyboard()
-
-        #if a is not int:
-    
+            print("critical error, you put a "+ x +" you should put a integer.")
+            reset()
         
         #this is for validate "1", "01" or "001" that come from the user    
         #if length invalid, restart the ~keyboard()~
@@ -58,34 +68,25 @@ def start():
     
     filesfunc()
     #create a string that will initiate the java Project
-    NumOfExec = keyboard()
+    NumOfExec = keyboard() 
     FileToExec=str('Project'+NumOfExec)
     ExecWay = str('java '+FileToExec+'.java')
 
     #i had the idea of remake the project euler but in python and c or c++, but
-    #i desist to do that in other languages because i prefer to do other projects than stuck with just one
+    #i desist to do that in other languages because i prefer to do other projects than stuck with just one,
     #and i already know the answer, so i don't think this will be good 
     
     exectime = time.time()
     print("")
-    print('May this take a little bit time, so be patient')
+    print("May this take a little bit time, so be patient(but it'll never pass 60 seconds")
     print("")
     os.system(ExecWay)
     print( "Executed in ≅",time.time() - exectime,'seconds')
     print("")
     
-    def reset():
-        reset = input("want to run it again? [y/n] ")
-        if reset=="y" or reset=="Y":
-            start()
-        elif reset=="n" or reset=="N":
-            print("")
-            print("ok, closing, goodbye!")
-        else:
-            print("that's a not valid string, please try again")
-            reset()
-    reset()
     #end of ~start()~
+    
+    reset()
 
 #this call the function of ~def start()~ to make all the interactions above     
 start()

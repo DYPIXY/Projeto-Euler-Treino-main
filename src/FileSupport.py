@@ -78,7 +78,7 @@ def start():
     
     exectime = time.time()
     print("")
-    print("May this take a little bit time, so be patient(but it'll never pass 60 seconds")
+    print("May this take a little bit time, so be patient(but it'll never pass 60 seconds)")
     print("")
     os.system(ExecWay)
     print( "Executed in ≅",time.time() - exectime,'seconds')

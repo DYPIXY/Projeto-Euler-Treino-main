@@ -15,6 +15,7 @@ def start():
         elif reset1=="n" or reset1=="N":
             print("")
             print("ok, closing, goodbye!")
+            quit()
         else:
             print("that's a not valid string, please try again")
             reset()

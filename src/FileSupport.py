@@ -19,9 +19,8 @@ def start():
             print("that's not a valid input, please try again")
             reset()
 
-
-    path = str(os.path.dirname(__file__))+"projeto"
-    os.chdir()
+    path = os.path.dirname(__file__)+"/Project"   
+    os.chdir(path)
     print('')
 
     #list all files in directory that starts with "Project"
@@ -50,10 +49,10 @@ def start():
         try:
             a=int(a)
         except ValueError:
-            print("critical error, you put a "+ x +" you should put a integer.")
+            print("critical error, you put a "+x+" you have to put an integer.")
             reset()
         
-        #this is for validate "1", "01" or "001" that come from the user    
+        #this is made to validate "1", "01" or "001" that come from the user    
         #if length invalid, restart the ~keyboard()~
         a = str(a)
         if len(a) == 1:

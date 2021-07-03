@@ -6,30 +6,31 @@ import math
 print("Hello",os.getlogin())
 
 def start():    
+    #reset the program if input is 
     def reset():
-        reset1 = input("want to run it again? [y/n] ")
-        if reset1=="y" or reset1=="Y":
+        reset1 = input("want to run it again? [y/n] ").lower()
+        if reset1=="y":
             start()
-        elif reset1=="n" or reset1=="N":
+        elif reset1=="n":
             print("")
             print("ok, closing, goodbye!")
             quit()
         else:
-            print("that's a not valid string, please try again")
+            print("that's not a valid input, please try again")
             reset()
 
 
-    path = os.path.dirname(__file__)
-    os.chdir(path)
+    path = str(os.path.dirname(__file__))+"projeto"
+    os.chdir()
     print('')
 
     #list all files in directory that starts with "Project"
-    def filesfunc():    
+    def filesfunc(): 
         ListFiles = []
-        for s in os.listdir(path): 
-            if s.startswith("Project"):
-                ListFiles.append(s)
-                ListFiles.sort()  
+        for fi in os.listdir(path): 
+            if fi.startswith("Project"):
+                ListFiles.append(fi)
+        ListFiles.sort()  
         print(ListFiles)
 
     #user input
@@ -43,7 +44,7 @@ def start():
             os.system("python doNotClick.py")
             quit()
         
-        #check if a is a int
+        #check if "a" is an int
         x = type(a)
         x = str(x)
         try:

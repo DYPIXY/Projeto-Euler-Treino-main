@@ -1,11 +1,13 @@
-
 import javax.swing.*;
 import java.util.*;
 import static java.lang.Math.sqrt;
 
 public class Função_Quadrática
 {
-    
+
+
+//teste
+
     static void GUI()
     {
         String coluna[] = {"se", "no", "de"};   
@@ -43,7 +45,6 @@ public class Função_Quadrática
 
 
         //não existe número real como resultado de raiz negativa, então se delta for menor que zero o conjunto solução (x1 e x2) será vazio.
-
         //delta
 
         double delta = b*b -4*a*c;
@@ -52,6 +53,7 @@ public class Função_Quadrática
             System.out.println("delta resultou em um número negativo");
             return;
         }
+
 
         //bhaskara
 
@@ -78,11 +80,10 @@ public class Função_Quadrática
         }
 
 
-
-
         //vértice
         int xv = -b/(2*a);
         int yv = (int)-delta/(4*a);
+
 
         //ponto máximo ou mínimo
         String ponto;
@@ -94,16 +95,16 @@ public class Função_Quadrática
         {
             ponto = "máximo";
         }
-
-
-
-    //chama o método que vai construir um gráfico monta com os dados informados
-
-
     }
-
-
-    
+}
+/*
+public class Graficos()
+{
 
 
 }
+*/
+
+
+
+

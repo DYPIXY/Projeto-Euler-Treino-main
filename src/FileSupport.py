@@ -2,8 +2,6 @@ import time
 import os
 import math
 
- 
-
 
 print("Hello",os.getlogin())
 

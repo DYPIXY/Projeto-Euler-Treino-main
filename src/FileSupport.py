@@ -24,13 +24,12 @@ def start():
     print('')
 
     #list all files in directory that starts with "Project"
-    def filesfunc(): 
-        ListFiles = []
-        for fi in os.listdir(path): 
-            if fi.startswith("Project"):
-                ListFiles.append(fi)
-        ListFiles.sort()  
-        print(ListFiles)
+    ListFiles = []
+    for fi in os.listdir(path): 
+        if fi.startswith("Project_class"):
+            ListFiles.append(fi)
+    ListFiles.sort()  
+    print(ListFiles)
 
     #user input
     def keyboard():
@@ -65,10 +64,10 @@ def start():
         a = str(a)
         return a
     
-    filesfunc()
+    
     #create a string that will initiate the java Project
     NumOfExec = keyboard() 
-    FileToExec=str('Project'+NumOfExec)
+    FileToExec = str('Project'+NumOfExec)
     ExecWay = str('java '+FileToExec+'.java')
 
     #i had the idea of remake the project euler but in python and c or c++, but

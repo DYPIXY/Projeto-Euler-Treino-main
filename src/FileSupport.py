@@ -8,41 +8,59 @@ print("Hello",os.getlogin())
 def start():    
     #reset the program if input is 
     def reset():
-        reset1 = input("want to run it again? [y/n] ").lower()
-        if reset1=="y":
+        reset1 = input("want to run it again? [y/n]: ").lower()
+        if reset1 == "y":
             start()
-        elif reset1=="n":
+        elif reset1 == "n":
             print("")
             print("ok, closing, goodbye!")
+            print("")
             quit()
         else:
             print("that's not a valid input, please try again")
             reset()
 
-    path = os.path.dirname(__file__)+"/Project"   
+
+    #change the current working directory
+    path = os.path.dirname(__file__)+"/Project_java"   
     os.chdir(path)
     print('')
+
 
     #list all files in directory that starts with "Project"
     ListFiles = []
     for fi in os.listdir(path): 
-        if fi.startswith("Project_class"):
+        if fi.startswith("Project"):
             ListFiles.append(fi)
     ListFiles.sort()  
     print(ListFiles)
 
+
+    #pre compile the files 
+    def preComp():
+        position = os.path.dirname(__file__)
+        javac = "javac "+path+" -d "+position+"/Project_class/"
+        #javac Project_java/* -d Project_class/
+        os.system(javac)   
+
+    com = input("Do you want to pre compile? [y/n]:").lower()
+    if com == "y":
+        preComp()
+
+
     #user input
     def keyboard():
+        
         a = input("Select the number that represents one of the projects you want to run: ")
         #shrek 2 
-        if a =="shrek2" or a=="Shrek2":
+        if a == "shrek2" or a == "Shrek2":
             pathx = os.path.dirname(__file__)
             path = str(pathx+"/doNotClick")
             os.chdir(path)
             os.system("python doNotClick.py")
             quit()
         
-        #check if "a" is an int
+        #check if ~a~ is an int
         x = type(a)
         x = str(x)
         try:

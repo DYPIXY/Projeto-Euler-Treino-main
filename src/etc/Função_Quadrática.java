@@ -30,7 +30,7 @@ public class Função_Quadrática
         Scanner scan = new Scanner(System.in);
         //a
         System.out.print("valor de a: ");
-        int a = scan.nextInt();
+        double a = scan.nextDouble();
         if(a==0)
         {
             System.out.println("'a' não pode ser zero");
@@ -38,10 +38,10 @@ public class Função_Quadrática
         }
         //b
         System.out.print("valor de b: ");
-        int b = scan.nextInt();
+        double b = scan.nextDouble();
         //c
         System.out.print("valor de c: ");
-        int c = scan.nextInt();
+        double c = scan.nextDouble();
 
 
         //não existe número real como resultado de raiz negativa, então se delta for menor que zero o conjunto solução (x1 e x2) será vazio.
@@ -64,8 +64,8 @@ public class Função_Quadrática
 
 
         //construção da parábola
-        List<Integer> xvalores = new ArrayList<Integer>();
-        List<Integer> yvalores = new ArrayList<Integer>();
+        List<Double> xvalores = new ArrayList<Double>();
+        List<Double> yvalores = new ArrayList<Double>();
         
         for(int x = -10 ; x<10 ; x++)
         {
@@ -73,7 +73,7 @@ public class Função_Quadrática
             xvalores.add(x);
             
             //função quadrática para obter o y
-            int y = a*(x*x) + b*x +c;
+            double y = a*(x*x) + b*x +c;
             
             yvalores.add(y);
 
@@ -81,8 +81,9 @@ public class Função_Quadrática
 
 
         //vértice
-        int xv = -b/(2*a);
-        int yv = (int)-delta/(4*a);
+        double bb = (double)b;
+        double xv = -bb / (a * 2);
+        double yv = -delta/(4*a);
 
 
         //ponto máximo ou mínimo
@@ -95,8 +96,19 @@ public class Função_Quadrática
         {
             ponto = "máximo";
         }
+    System.out.println("x1: "+x1);
+    System.out.println("x2: "+x2);
+    System.out.println("delta: "+delta);
+    System.out.println("xv: "+xv);
+    System.out.println("yv: "+yv);
+    System.out.println("ponto: "+ponto);
+    System.out.println("raiz de delta: "+raizDelta);
+
+
     }
+
 }
+
 /*
 public class Graficos()
 {
@@ -104,7 +116,3 @@ public class Graficos()
 
 }
 */
-
-
-
-
